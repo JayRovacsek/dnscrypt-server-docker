@@ -6,7 +6,7 @@ apt-get update && apt-get upgrade -y
 
 SERVER="$(hostname)"
 export SERVER
-SERVER_IP="$(ip route get 1 | awk '{print $NF;exit}')"
+SERVER_IP="$(ip route get 1 | awk '{print $3;exit}')"
 export SERVER_IP
 echo "$SERVER"
 echo "$SERVER_IP"
