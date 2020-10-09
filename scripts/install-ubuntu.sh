@@ -51,7 +51,7 @@ else
         -v /etc/encrypted-dns/keys:/opt/encrypted-dns/etc/keys \
         -v /etc/encrypted-dns/lists:/opt/encrypted-dns/etc/lists \
         --name=dnscrypt-server -p 443:443/udp -p 443:443/tcp --net=host \
-        jedisct1/dnscrypt-server init -N "$SERVER" -E "${SERVER_IP}:443"
+        jedisct1/dnscrypt-server init -A -N "$SERVER" -E "${SERVER_IP}:443"
     docker start dnscrypt-server
 fi
 
